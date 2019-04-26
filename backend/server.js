@@ -5,19 +5,15 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 const Data = require("./data");
 
-// for reference https://medium.com/javascript-in-plain-english/full-stack-mongodb-react-node-js-express-js-in-one-simple-app-6cc8ed6de274
+
 const API_PORT = 27017;
-//3001
 const app = express();
 app.use(cors());
 const router = express.Router();
 
 // this is our MongoDB database
-// this could also connect to a hosted mongo DB
+// this could also connect to a hosted mongo DB like //const dbRoute = "mongodb+srv://clustertest-xymjq.mongodb.net/test"
 const dbRoute = "mongodb://127.0.0.1:27017/food";
-//const dbRoute = "mongodb+srv://clustertest-xymjq.mongodb.net/test"
-//mongodb+srv://mongo:<password>@clustertest-xymjq.mongodb.net/test?retryWrites=true
-
 // connects our back end code with the database
 
 mongoose.connect(
@@ -29,15 +25,17 @@ let db = mongoose.connection;
 let dbdata;
 
 db.on('error', console.error.bind(console, 'connection error:'));
+/*
+// quickly test results below
 db.once('open', function () {
     db.db.collection("UnitedStatesOnly", function(err, collection){
         collection.find({"_id": "0000000035590"}).toArray(function(err, data){
-            console.log("data length from coll ", data.length); // it will print your collection data
             dbdata = data
         })
     });
-
 });
+*/
+
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
@@ -45,10 +43,25 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
-
+//getData/query?id=0000000035590&brands=Taste%20Adventure
 router.get("/getData", (req, res) => {
-  //return dbdata[0]
-  res.status(200).send(dbdata)
+  var giveData;
+  var id = req.query.id;
+  var brands = req.query.brands;
+  console.log("id", id)
+  console.log("brands", brands)
+  db.db.collection('UnitedStatesOnly',function(err, data){
+    if(err){
+      throw err;
+    }
+    else {
+      data.find({"_id": id, "brands": brands}).toArray(function(error, documents) {
+          if (err) throw error;
+          console.log(documents)
+          res.send(documents);
+      });
+    }
+  })
 });
 
 

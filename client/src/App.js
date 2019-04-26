@@ -21,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     this.getDataFromDb();
     if (!this.state.intervalIsSet) {
-      let interval = setInterval(this.getDataFromDb, 10000);
+      let interval = setInterval(this.getDataFromDb, 1000000);
       this.setState({ intervalIsSet: interval });
     }
   }
@@ -43,7 +43,8 @@ class App extends Component {
   // our first get method that uses our backend api to
   // fetch data from our data base
   getDataFromDb = () => {
-    fetch("http://localhost:27017/api/getData")
+    fetch("http://localhost:27017/api/getData" + "?id=0000000035590&brands=Taste%20Adventure") //  Query format here: fetch("http://localhost:27017/api/getData" + "?id=234234324342&brands=Taste%20Adventure")
+    //.then(data => data.text()).then(data => console.log(data))
     .then(data => data.json())
     .then(answer => this.setState({ data: answer }, console.log(this.state.data)));
   };
@@ -61,8 +62,6 @@ class App extends Component {
       message: message
     });
   };
-
-
   // our delete method that uses our backend api
   // to remove existing database information
   deleteFromDB = idTodelete => {
@@ -72,15 +71,12 @@ class App extends Component {
         objIdToDelete = dat._id;
       }
     });
-
     axios.delete("http://localhost:27017/api/deleteData", {
       data: {
         id: objIdToDelete
       }
     });
   };
-
-
   // our update method that uses our backend api
   // to overwrite existing data base information
   updateDB = (idToUpdate, updateToApply) => {
@@ -101,6 +97,9 @@ class App extends Component {
   // here is our UI
   // it is easy to understand their functions when you
   // see them render into our screen
+  // There will be a query form. On submit, we will fire the get data function and populate the state.
+
+  // there will be a button which will launch get data and set variables to query
   render() {
     const db = this.state.data;
     console.log("should render", db)
