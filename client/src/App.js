@@ -1,6 +1,7 @@
 // /client/App.js
 import React, { Component } from "react";
 import axios from "axios";
+import Frontend from "./frontend";
 
 class App extends Component {
   // initialize our state
@@ -109,6 +110,7 @@ class App extends Component {
         <p>This is the data</p>
         {console.log(db.map(db => db.ingredients_text))}
         {db.map(db => <div>{db.ingredients_text}</div>)}
+        <Frontend/>
       </div>
     );
   }

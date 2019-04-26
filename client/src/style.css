@@ -1,0 +1,11 @@
+html{
+    font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+#map {
+	height: 100vh;
+}
+
+#Submit, #Clear{
+    cursor: pointer;
+}
