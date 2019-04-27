@@ -50,7 +50,7 @@ router.get("/getData", (req, res) => {
   var brands = req.query.brands;
   console.log("id", id)
   console.log("brands", brands)
-  db.db.collection('UnitedStatesOnly',function(err, data){
+  db.db.collection('USonly',function(err, data){
     if(err){
       throw err;
     }

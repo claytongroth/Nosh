@@ -12,13 +12,24 @@ class App extends React.Component {
     this.state = {
       gtin: null,
       mlocation: null,
-      ingredients: null
+      ingredients: [],
+      labels: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  handleSubmit(){
+  handleSubmit(e){
+    e.preventDefault();
+
     console.log("submited")
-    
+  }
+  handleChange(e){
+    let field = e.target.name;
+    console.log(field);
+    if (field === "Universal Product Code"){ this.setState({gtin: field}, console.log(this.state.gtin))};
+    if (field === "Manufacturing Location"){this.setState({mlocation: field}, console.log(this.state.gtin))}
+    if (field === "Ingredients"){this.setState({ingredients: field}, console.log(this.state.gtin))}
+    if (field === "Labels"){this.setState({labels: field}, console.log(this.state.gtin))}
   }
   render() {
    return (
@@ -38,7 +49,7 @@ class App extends React.Component {
                   <div className="form-group">
                     <label className="col-md-12 control-label" htmlFor="Universal Product Code">Universal Product Code</label>
                     <div className="col-md-12">
-                      <input className="form-control input-md" id="Universal Product Code" name="Universal Product Code" placeholder="(GTIN-12)" type="text" />
+                      <input onChange={(e)=>this.handleChange(e)} className="form-control input-md" id="Universal Product Code" name="Universal Product Code" placeholder="(GTIN-12)" type="text" />
                     </div>
                   </div>{/* Search input*/}
                   <div className="form-group">
@@ -80,7 +91,7 @@ class App extends React.Component {
                   <div className="form-group">
                     <label className="col-md-12 control-label" htmlFor="Submit" />
                     <div className="col-md-12">
-                      <button className="btn btn-primary" id="Submit" name="Submit" onClick={()=>this.handleSubmit()}>Submit</button> <button className="btn btn-warning" id="Clear" name="Clear">Clear</button>
+                      <button className="btn btn-primary" id="Submit" name="Submit" onClick={(e)=>this.handleSubmit(e)}>Submit</button> <button className="btn btn-warning" id="Clear" name="Clear">Clear</button>
                     </div>
                   </div>
                 </fieldset>
