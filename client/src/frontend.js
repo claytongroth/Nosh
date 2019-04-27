@@ -7,6 +7,19 @@ import './style.css'
 
 
 class App extends React.Component {
+  constructor(props, context) {
+  super(props, context);
+    this.state = {
+      gtin: null,
+      mlocation: null,
+      ingredients: null
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(){
+    console.log("submited")
+    
+  }
   render() {
    return (
       <div>
@@ -67,7 +80,7 @@ class App extends React.Component {
                   <div className="form-group">
                     <label className="col-md-12 control-label" htmlFor="Submit" />
                     <div className="col-md-12">
-                      <button className="btn btn-primary" id="Submit" name="Submit">Submit</button> <button className="btn btn-warning" id="Clear" name="Clear">Clear</button>
+                      <button className="btn btn-primary" id="Submit" name="Submit" onClick={()=>this.handleSubmit()}>Submit</button> <button className="btn btn-warning" id="Clear" name="Clear">Clear</button>
                     </div>
                   </div>
                 </fieldset>
