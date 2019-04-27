@@ -47,17 +47,15 @@ app.use(logger("dev"));
 router.get("/getData", (req, res) => {
   var giveData;
   var id = req.query.id;
-  var brands = req.query.brands;
-  console.log("id", id)
-  console.log("brands", brands)
+
   db.db.collection('USonly',function(err, data){
     if(err){
       throw err;
     }
     else {
-      data.find({"_id": id, "brands": brands}).toArray(function(error, documents) {
+      data.find({"_id": id}).toArray(function(error, documents) {
           if (err) throw error;
-          console.log(documents)
+          console.log("Get request for:", documents)
           res.send(documents);
       });
     }
