@@ -190,7 +190,7 @@ class MainApp extends React.Component {
               </form>
             </div>
             <div className="col-md-8">
-                <Map/>
+                <Map markerPosition={this.state.data[0] ? this.state.data[0].manufacturing_places: "places here"} test ={this.state.data} />
             </div>
           </div>
         </div>

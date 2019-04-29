@@ -13,7 +13,7 @@ const router = express.Router();
 
 // this is our MongoDB database
 // this could also connect to a hosted mongo DB like //const dbRoute = "mongodb+srv://clustertest-xymjq.mongodb.net/test"
-const dbRoute = "mongodb://127.0.0.1:27017/food";
+const dbRoute = "mongodb://127.0.0.1:27017/noshdb";
 // connects our back end code with the database
 
 mongoose.connect(
@@ -48,7 +48,7 @@ router.get("/getData", (req, res) => {
   var giveData;
   var id = req.query.id;
 
-  db.db.collection('USonly',function(err, data){
+  db.db.collection('USFoodOnly',function(err, data){
     if(err){
       throw err;
     }
