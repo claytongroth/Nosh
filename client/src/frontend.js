@@ -29,7 +29,7 @@ class MainApp extends React.Component {
     e.preventDefault();
     let mongoQuery = "?id=" + this.state.gtin.toString();
     // create the mongo query in the logic here
-    // 0016229004019
+    // 0016229004019 test gtin id
     this.getDataFromDb(mongoQuery);
     console.log("submited: ", mongoQuery)
   }
