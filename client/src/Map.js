@@ -3,6 +3,7 @@ import L from "leaflet";
 import 'leaflet/dist/leaflet.css';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import Geocode from "react-geocode";
 
 let DefaultIcon = L.icon({
     iconUrl: icon,
@@ -11,6 +12,8 @@ let DefaultIcon = L.icon({
     iconAnchor: [12,36],
     popupAnchor: [0, -30]
 });
+
+
 
 class Map extends React.Component {
   componentDidMount() {
@@ -30,7 +33,7 @@ var light = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/
 			attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 		});;
 	//create the map
-	var map = L.map('map', {
+      Window.map = L.map('map', {
 		center: [36.9510, -99.3444],
 		zoom: 4,
 		minZoom: 3,
@@ -45,10 +48,23 @@ var light = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/
 		"Imagery": imagery
 	};
 	//add the base layers control to the map
-	L.control.layers(baseLayers).addTo(map);
+	L.control.layers(baseLayers).addTo(Window.map);
     L.Marker.prototype.options.icon = DefaultIcon;
-    L.marker([28.9024, -81.89209]).addTo(map).bindPopup('A pretty CSS3 popup. <br> Easily customizable.');
+    Geocode.setApiKey("AIzaSyCEsvEY5TsylaZu9oJLxAidDE2gbgpf2_I");
   }
+componentDidUpdate() {
+    Geocode.fromAddress(this.props.markerPosition).then(
+  response => {
+    const { lat, lng } = response.results[0].geometry.location;
+    if(this.props.markerPosition != "places here"){
+    L.marker([lat, lng]).addTo(Window.map).bindPopup('A pretty CSS3 popup. <br> Easily customizable.');
+    }
+  },
+  error => {
+    console.error(error);
+  }
+);
+}
   render() {
     return <div id="map" />;
   }

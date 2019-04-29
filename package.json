@@ -16,6 +16,7 @@
     "leaflet-react": "^3.0.5",
     "query-string": "^6.4.2",
     "react": "^16.8.6",
+    "react-geocode": "^0.1.2",
     "react-scripts": "^3.0.0",
     "renamer": "^1.1.1",
     "url": "^0.11.0"
