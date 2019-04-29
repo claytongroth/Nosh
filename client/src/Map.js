@@ -57,7 +57,7 @@ componentDidUpdate() {
   response => {
     const { lat, lng } = response.results[0].geometry.location;
     if(this.props.markerPosition != "places here"){
-    L.marker([lat, lng]).addTo(Window.map).bindPopup('A pretty CSS3 popup. <br> Easily customizable.');
+    L.marker([lat, lng]).addTo(Window.map).bindPopup("Item ID: "+JSON.stringify(this.props.test[0]._id)+"<br>"+"Proudct Name:  "+JSON.stringify(this.props.test[0].product_name)+"<br>"+"Brands: "+JSON.stringify(this.props.test[0].brands)+"<br>"+"Purchase Places: "+JSON.stringify(this.props.test[0].purchase_places));
     }
   },
   error => {
