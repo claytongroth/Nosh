@@ -48,7 +48,7 @@ router.get("/getData", (req, res) => {
   var giveData;
   var id = req.query.id;
 
-  db.db.collection('UnitedStatesFood',function(err, data){
+  db.db.collection('USFoodOnly',function(err, data){
     if(err){
       throw err;
     }
