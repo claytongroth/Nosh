@@ -1,8 +1,16 @@
 import React from "react";
 import L from "leaflet";
 import 'leaflet/dist/leaflet.css';
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow,
+    iconSize: [24,36],
+    iconAnchor: [12,36],
+    popupAnchor: [0, -30]
+});
 
 class Map extends React.Component {
   componentDidMount() {
@@ -21,7 +29,6 @@ var light = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/
 		imagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 			attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 		});;
-	
 	//create the map
 	var map = L.map('map', {
 		center: [36.9510, -99.3444],
@@ -39,6 +46,8 @@ var light = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/
 	};
 	//add the base layers control to the map
 	L.control.layers(baseLayers).addTo(map);
+    L.Marker.prototype.options.icon = DefaultIcon;
+    L.marker([28.9024, -81.89209]).addTo(map).bindPopup('A pretty CSS3 popup. <br> Easily customizable.');
   }
   render() {
     return <div id="map" />;
