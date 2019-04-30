@@ -8,9 +8,9 @@ import Geocode from "react-geocode";
 let DefaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
-    iconSize: [24,36],
-    iconAnchor: [12,36],
-    popupAnchor: [0, -30]
+    iconSize: [25,41],
+    iconAnchor: [12.5 ,41],
+    popupAnchor: [0, -41]
 });
 
 
@@ -51,6 +51,17 @@ class Map extends React.Component {
 	L.control.layers(baseLayers).addTo(Window.map);
     L.Marker.prototype.options.icon = DefaultIcon;
     Geocode.setApiKey("AIzaSyCEsvEY5TsylaZu9oJLxAidDE2gbgpf2_I");
+    navigator.geolocation.getCurrentPosition((position)=>{
+        Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
+  response => {
+    const address = response.results[0].formatted_address;
+    L.marker([position.coords.latitude, position.coords.longitude]).addTo(Window.map).bindPopup(address);
+  },
+  error => {
+    console.error(error);
+  }
+);
+    });
   }
 componentDidUpdate() {
     Geocode.fromAddress(this.props.markerPosition).then(
