@@ -4,6 +4,9 @@ import 'leaflet/dist/leaflet.css';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import Geocode from "react-geocode";
+import 'leaflet-easybutton';
+import '../node_modules/leaflet-easybutton/src/easy-button.css';
+Geocode.setApiKey("AIzaSyCEsvEY5TsylaZu9oJLxAidDE2gbgpf2_I");
 
 let DefaultIcon = L.icon({
     iconUrl: icon,
@@ -50,7 +53,8 @@ class Map extends React.Component {
 	//add the base layers control to the map
 	L.control.layers(baseLayers).addTo(Window.map);
     L.Marker.prototype.options.icon = DefaultIcon;
-    Geocode.setApiKey("AIzaSyCEsvEY5TsylaZu9oJLxAidDE2gbgpf2_I");
+    L.easyButton('fa-location-arrow', function(btn, map){
+         
     navigator.geolocation.getCurrentPosition((position)=>{
         Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
   response => {
@@ -62,6 +66,8 @@ class Map extends React.Component {
   }
 );
     });
+}).addTo(Window.map);
+ 
   }
 componentDidUpdate() {
     Geocode.fromAddress(this.props.markerPosition).then(
