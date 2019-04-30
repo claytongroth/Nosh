@@ -13,6 +13,7 @@
     "axios": "^0.18.0",
     "concurrently": "^4.0.1",
     "leaflet": "^1.4.0",
+    "leaflet-ajax": "^2.1.0",
     "leaflet-easybutton": "^2.4.0",
     "leaflet-react": "^3.0.5",
     "query-string": "^6.4.2",

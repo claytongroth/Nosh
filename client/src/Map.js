@@ -5,9 +5,13 @@ import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import Geocode from "react-geocode";
 import 'leaflet-easybutton';
+import 'leaflet-ajax';
 import '../node_modules/leaflet-easybutton/src/easy-button.css';
+import e3 from './json/e3.geojson';
+import gsn from './json/GSN.geojson';
 Geocode.setApiKey("AIzaSyCEsvEY5TsylaZu9oJLxAidDE2gbgpf2_I");
 
+//default icon
 let DefaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
@@ -15,11 +19,12 @@ let DefaultIcon = L.icon({
     iconAnchor: [12.5 ,41],
     popupAnchor: [0, -41]
 });
-
+L.Marker.prototype.options.icon = DefaultIcon;
 
 
 class Map extends React.Component {
   componentDidMount() {
+    //baselayer setup
     var light = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicHNteXRoMiIsImEiOiJjaXNmNGV0bGcwMG56MnludnhyN3Y5OHN4In0.xsZgj8hsNPzjb91F31-rYA', {
 			id: 'mapbox.streets',
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
@@ -52,9 +57,8 @@ class Map extends React.Component {
 	};
 	//add the base layers control to the map
 	L.control.layers(baseLayers).addTo(Window.map);
-    L.Marker.prototype.options.icon = DefaultIcon;
+    //create button to get user location and draw marker on map
     L.easyButton('fa-location-arrow', function(btn, map){
-         
     navigator.geolocation.getCurrentPosition((position)=>{
         Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
   response => {
@@ -67,9 +71,29 @@ class Map extends React.Component {
 );
     });
 }).addTo(Window.map);
- 
+
+//geojson data import via leaflet-ajax lib
+var e3Layer = new L.GeoJSON.AJAX(e3, {
+		pointToLayer: pointToLayer
+	}).addTo(Window.map);
+var gsnLayer = new L.GeoJSON.AJAX(gsn, {
+		pointToLayer: pointToLayer
+	}).addTo(Window.map);
+
+ function pointToLayer(feature, latlng) {
+		var geojsonMarkerOptions = {
+			radius: 13,
+			fillColor: "red",
+			color: "#000000",
+			weight: 1,
+			opacity: 1,
+			fillOpacity: 0.5
+		}
+        return L.circleMarker(latlng, geojsonMarkerOptions);
+    } 
   }
 componentDidUpdate() {
+    //geocode and draw queried item from item id passed in from the frontend.js component
     Geocode.fromAddress(this.props.markerPosition).then(
   response => {
     const { lat, lng } = response.results[0].geometry.location;
