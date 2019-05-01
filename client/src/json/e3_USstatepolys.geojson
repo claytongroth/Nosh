@@ -1,0 +1,872 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.36400000000,46.05920000000 ]
+    },
+    "properties": {
+    "OBJECTID":1,
+    "region":"Midwest",
+    "postal":"MN",
+    "gn_name":"Minnesota",
+    "State":"Minnesota",
+    "Count":0,
+    "Shape_Leng":28.8134870365,
+    "Shape_Area":25.4527085642
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.36100000000,47.48650000000 ]
+    },
+    "properties": {
+    "OBJECTID":2,
+    "region":"West",
+    "postal":"WA",
+    "gn_name":"Washington",
+    "State":"Washington",
+    "Count":9,
+    "Shape_Leng":43.7033959321,
+    "Shape_Area":20.7409101393
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.13300000000,43.78250000000 ]
+    },
+    "properties": {
+    "OBJECTID":3,
+    "region":"West",
+    "postal":"ID",
+    "gn_name":"Idaho",
+    "State":"Idaho",
+    "Count":25,
+    "Shape_Leng":27.8577344817,
+    "Shape_Area":24.4376683141
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.04400000000,46.99650000000 ]
+    },
+    "properties": {
+    "OBJECTID":4,
+    "region":"West",
+    "postal":"MT",
+    "gn_name":"Montana",
+    "State":"Montana",
+    "Count":4,
+    "Shape_Leng":33.9155502223,
+    "Shape_Area":44.9189168605
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.94790000000,43.43430000000 ]
+    },
+    "properties": {
+    "OBJECTID":5,
+    "region":"Midwest",
+    "postal":"MI",
+    "gn_name":"Michigan",
+    "State":"Michigan",
+    "Count":10,
+    "Shape_Leng":48.7097628252,
+    "Shape_Area":17.127475532
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.67190000000,40.09240000000 ]
+    },
+    "properties": {
+    "OBJECTID":6,
+    "region":"Midwest",
+    "postal":"OH",
+    "gn_name":"Ohio",
+    "State":"Ohio",
+    "Count":27,
+    "Shape_Leng":16.5274795173,
+    "Shape_Area":11.3350334848
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.32420000000,43.19880000000 ]
+    },
+    "properties": {
+    "OBJECTID":7,
+    "region":"Northeast",
+    "postal":"NY",
+    "gn_name":"New York",
+    "State":"New York",
+    "Count":54,
+    "Shape_Leng":34.9793121672,
+    "Shape_Area":13.9616790135
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.60940000000,40.86010000000 ]
+    },
+    "properties": {
+    "OBJECTID":8,
+    "region":"Northeast",
+    "postal":"PA",
+    "gn_name":"Pennsylvania",
+    "State":"Pennsylvania",
+    "Count":5,
+    "Shape_Leng":16.8836581154,
+    "Shape_Area":12.5377921226
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.59100000000,36.74960000000 ]
+    },
+    "properties": {
+    "OBJECTID":9,
+    "region":"West",
+    "postal":"CA",
+    "gn_name":"California",
+    "State":"California",
+    "Count":4,
+    "Shape_Leng":47.0957167692,
+    "Shape_Area":41.6516368767
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.02400000000,34.50020000000 ]
+    },
+    "properties": {
+    "OBJECTID":10,
+    "region":"West",
+    "postal":"NM",
+    "gn_name":"New Mexico",
+    "State":"New Mexico",
+    "Count":4,
+    "Shape_Leng":23.6506396537,
+    "Shape_Area":30.9085349069
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.76070000000,31.13100000000 ]
+    },
+    "properties": {
+    "OBJECTID":11,
+    "region":"South",
+    "postal":"TX",
+    "gn_name":"Texas",
+    "State":"Texas",
+    "Count":98,
+    "Shape_Leng":63.5254332263,
+    "Shape_Area":65.1092484607
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -151.60400000000,65.36090000000 ]
+    },
+    "properties": {
+    "OBJECTID":12,
+    "region":"West",
+    "postal":"AK",
+    "gn_name":"Alaska",
+    "State":"Alaska",
+    "Count":2,
+    "Shape_Leng":545.160106149,
+    "Shape_Area":279.238456192
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.99910000000,30.52740000000 ]
+    },
+    "properties": {
+    "OBJECTID":13,
+    "region":"South",
+    "postal":"LA",
+    "gn_name":"Louisiana",
+    "State":"Louisiana",
+    "Count":11,
+    "Shape_Leng":35.321424594,
+    "Shape_Area":11.3015258718
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.71890000000,32.86570000000 ]
+    },
+    "properties": {
+    "OBJECTID":14,
+    "region":"South",
+    "postal":"MS",
+    "gn_name":"Mississippi",
+    "State":"Mississippi",
+    "Count":6,
+    "Shape_Leng":18.6009138228,
+    "Shape_Area":11.9166756428
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.71840000000,32.85510000000 ]
+    },
+    "properties": {
+    "OBJECTID":15,
+    "region":"South",
+    "postal":"AL",
+    "gn_name":"Alabama",
+    "State":"Alabama",
+    "Count":140,
+    "Shape_Leng":18.1609225833,
+    "Shape_Area":12.8844703509
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.40780000000,32.85470000000 ]
+    },
+    "properties": {
+    "OBJECTID":16,
+    "region":"South",
+    "postal":"GA",
+    "gn_name":"Georgia",
+    "State":"Georgia",
+    "Count":0,
+    "Shape_Leng":20.5768400568,
+    "Shape_Area":14.6286460385
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.64710000000,33.85780000000 ]
+    },
+    "properties": {
+    "OBJECTID":17,
+    "region":"South",
+    "postal":"SC",
+    "gn_name":"South Carolina",
+    "State":"South Carolina",
+    "Count":9,
+    "Shape_Leng":17.5770397957,
+    "Shape_Area":7.81592601144
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.86600000000,35.61520000000 ]
+    },
+    "properties": {
+    "OBJECTID":18,
+    "region":"South",
+    "postal":"NC",
+    "gn_name":"North Carolina",
+    "State":"North Carolina",
+    "Count":52,
+    "Shape_Leng":41.9914271397,
+    "Shape_Area":12.6899499091
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.24310000000,37.74030000000 ]
+    },
+    "properties": {
+    "OBJECTID":19,
+    "region":"South",
+    "postal":"VA",
+    "gn_name":"Virginia",
+    "State":"Virginia",
+    "Count":86,
+    "Shape_Leng":31.2190517033,
+    "Shape_Area":10.4202993667
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.38600000000,43.83330000000 ]
+    },
+    "properties": {
+    "OBJECTID":20,
+    "region":"West",
+    "postal":"OR",
+    "gn_name":"Oregon",
+    "State":"Oregon",
+    "Count":2,
+    "Shape_Leng":27.1036726664,
+    "Shape_Area":28.2417387291
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.54300000000,38.99980000000 ]
+    },
+    "properties": {
+    "OBJECTID":21,
+    "region":"West",
+    "postal":"CO",
+    "gn_name":"Colorado",
+    "State":"Colorado",
+    "Count":28,
+    "Shape_Leng":22.0014148215,
+    "Shape_Area":27.9981042001
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.38910000000,42.04230000000 ]
+    },
+    "properties": {
+    "OBJECTID":22,
+    "region":"Midwest",
+    "postal":"IA",
+    "gn_name":"Iowa",
+    "State":"Iowa",
+    "Count":0,
+    "Shape_Leng":18.6395867037,
+    "Shape_Area":15.8257865654
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.44600000000,38.54870000000 ]
+    },
+    "properties": {
+    "OBJECTID":23,
+    "region":"Midwest",
+    "postal":"MO",
+    "gn_name":"Missouri",
+    "State":"Missouri",
+    "Count":56,
+    "Shape_Leng":22.9641173458,
+    "Shape_Area":18.609041811
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.58310000000,44.37090000000 ]
+    },
+    "properties": {
+    "OBJECTID":24,
+    "region":"Midwest",
+    "postal":"WI",
+    "gn_name":"Wisconsin",
+    "State":"Wisconsin",
+    "Count":195,
+    "Shape_Leng":23.9134523694,
+    "Shape_Area":16.4924392627
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.19910000000,39.94600000000 ]
+    },
+    "properties": {
+    "OBJECTID":25,
+    "region":"Midwest",
+    "postal":"IL",
+    "gn_name":"Illinois",
+    "State":"Illinois",
+    "Count":22,
+    "Shape_Leng":19.5908317306,
+    "Shape_Area":15.4268035125
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.57290000000,37.39940000000 ]
+    },
+    "properties": {
+    "OBJECTID":26,
+    "region":"South",
+    "postal":"KY",
+    "gn_name":"Kentucky",
+    "State":"Kentucky",
+    "Count":2,
+    "Shape_Leng":20.7934134344,
+    "Shape_Area":10.6606412245
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.14280000000,34.75630000000 ]
+    },
+    "properties": {
+    "OBJECTID":27,
+    "region":"South",
+    "postal":"AR",
+    "gn_name":"Arkansas",
+    "State":"Arkansas",
+    "Count":0,
+    "Shape_Leng":17.4652773229,
+    "Shape_Area":13.5669864826
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.34150000000,35.75140000000 ]
+    },
+    "properties": {
+    "OBJECTID":28,
+    "region":"South",
+    "postal":"TN",
+    "gn_name":"Tennessee",
+    "State":"Tennessee",
+    "Count":3,
+    "Shape_Leng":20.5469143883,
+    "Shape_Area":10.9045286179
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.71280000000,38.64220000000 ]
+    },
+    "properties": {
+    "OBJECTID":29,
+    "region":"South",
+    "postal":"WV",
+    "gn_name":"West Virginia",
+    "State":"West Virginia",
+    "Count":90,
+    "Shape_Leng":17.1844977777,
+    "Shape_Area":6.49215779449
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.13960000000,39.88740000000 ]
+    },
+    "properties": {
+    "OBJECTID":30,
+    "region":"Midwest",
+    "postal":"IN",
+    "gn_name":"Indiana",
+    "State":"Indiana",
+    "Count":4,
+    "Shape_Leng":15.8833845831,
+    "Shape_Area":9.87986719156
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.30200000000,47.46750000000 ]
+    },
+    "properties": {
+    "OBJECTID":31,
+    "region":"Midwest",
+    "postal":"ND",
+    "gn_name":"North Dakota",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":20.758316071,
+    "Shape_Area":21.7953822276
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -69.19730000000,45.14800000000 ]
+    },
+    "properties": {
+    "OBJECTID":32,
+    "region":"Northeast",
+    "postal":"ME",
+    "gn_name":"Maine",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":28.2873520323,
+    "Shape_Area":9.69133418109
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.63010000000,43.59930000000 ]
+    },
+    "properties": {
+    "OBJECTID":33,
+    "region":"Northeast",
+    "postal":"NH",
+    "gn_name":"New Hampshire",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":7.99367107573,
+    "Shape_Area":2.70917901328
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.73170000000,44.08860000000 ]
+    },
+    "properties": {
+    "OBJECTID":34,
+    "region":"Northeast",
+    "postal":"VT",
+    "gn_name":"Vermont",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":8.24367448907,
+    "Shape_Area":2.76812317568
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.93500000000,34.30460000000 ]
+    },
+    "properties": {
+    "OBJECTID":35,
+    "region":"West",
+    "postal":"AZ",
+    "gn_name":"Arizona",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":23.1017633747,
+    "Shape_Area":28.9026289417
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.62280000000,28.15680000000 ]
+    },
+    "properties": {
+    "OBJECTID":36,
+    "region":"South",
+    "postal":"FL",
+    "gn_name":"Florida",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":53.7662430369,
+    "Shape_Area":13.5471727375
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.01130000000,38.89220000000 ]
+    },
+    "properties": {
+    "OBJECTID":37,
+    "region":"South",
+    "postal":"DC",
+    "gn_name":"District of Columbia",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":0.60388334885,
+    "Shape_Area":0.01684894949
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.04540000000,39.38740000000 ]
+    },
+    "properties": {
+    "OBJECTID":38,
+    "region":"South",
+    "postal":"MD",
+    "gn_name":"Maryland",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":28.781735983,
+    "Shape_Area":2.65015898429
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.41120000000,38.86570000000 ]
+    },
+    "properties": {
+    "OBJECTID":39,
+    "region":"South",
+    "postal":"DE",
+    "gn_name":"Delaware",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":4.70553260941,
+    "Shape_Area":0.53776021556
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.46530000000,40.04490000000 ]
+    },
+    "properties": {
+    "OBJECTID":40,
+    "region":"Northeast",
+    "postal":"NJ",
+    "gn_name":"New Jersey",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":10.8674262056,
+    "Shape_Area":2.08016911043
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.75940000000,41.64860000000 ]
+    },
+    "properties": {
+    "OBJECTID":41,
+    "region":"Northeast",
+    "postal":"CT",
+    "gn_name":"Connecticut",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":6.12117055942,
+    "Shape_Area":1.3729665793
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.50820000000,41.62420000000 ]
+    },
+    "properties": {
+    "OBJECTID":42,
+    "region":"Northeast",
+    "postal":"RI",
+    "gn_name":"Rhode Island",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":4.79250160831,
+    "Shape_Area":0.30589794391
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.99930000000,42.37390000000 ]
+    },
+    "properties": {
+    "OBJECTID":43,
+    "region":"Northeast",
+    "postal":"MA",
+    "gn_name":"Massachusetts",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":16.6793860139,
+    "Shape_Area":2.30880932398
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -157.99900000000,21.49190000000 ]
+    },
+    "properties": {
+    "OBJECTID":44,
+    "region":"West",
+    "postal":"HI",
+    "gn_name":"Hawaii",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":13.6017961329,
+    "Shape_Area":1.45679615927
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.54400000000,39.50070000000 ]
+    },
+    "properties": {
+    "OBJECTID":45,
+    "region":"West",
+    "postal":"UT",
+    "gn_name":"Utah",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":19.9865253469,
+    "Shape_Area":22.9629975392
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.55200000000,42.99990000000 ]
+    },
+    "properties": {
+    "OBJECTID":46,
+    "region":"West",
+    "postal":"WY",
+    "gn_name":"Wyoming",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":21.9908878888,
+    "Shape_Area":27.9884573923
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.02000000000,39.42990000000 ]
+    },
+    "properties": {
+    "OBJECTID":47,
+    "region":"West",
+    "postal":"NV",
+    "gn_name":"Nevada",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":23.5445325228,
+    "Shape_Area":30.0134968644
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.25500000000,44.47110000000 ]
+    },
+    "properties": {
+    "OBJECTID":48,
+    "region":"Midwest",
+    "postal":"SD",
+    "gn_name":"South Dakota",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":22.5785318891,
+    "Shape_Area":22.531615679
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.68550000000,41.50020000000 ]
+    },
+    "properties": {
+    "OBJECTID":49,
+    "region":"Midwest",
+    "postal":"NE",
+    "gn_name":"Nebraska",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":23.1393338987,
+    "Shape_Area":21.6835975917
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.33090000000,38.50000000000 ]
+    },
+    "properties": {
+    "OBJECTID":50,
+    "region":"Midwest",
+    "postal":"KS",
+    "gn_name":"Kansas",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":21.0478050605,
+    "Shape_Area":21.9763199259
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.13090000000,35.45200000000 ]
+    },
+    "properties": {
+    "OBJECTID":51,
+    "region":"South",
+    "postal":"OK",
+    "gn_name":"Oklahoma",
+    "State":"",
+    "Count":0,
+    "Shape_Leng":24.5280695975,
+    "Shape_Area":17.966192758
+    }
+  }
+]
+}

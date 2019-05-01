@@ -1,0 +1,2423 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.74,42.9 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"A.J. Panneri Enterprises, Inc.",
+    "City":"Cheektowaga",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.13,38.54 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"ABB Boston",
+    "City":"Boston",
+    "State":"VA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.54,40.15 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"ABB Inc. - Mt. Pleasant, PA",
+    "City":"Mt. Pleasant",
+    "State":"PA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.64,35.79 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"ABB Inc. - Pinetops, NC",
+    "City":"Pinetops",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.01,40.2 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Abrasive Technologies",
+    "City":"Lewis Center",
+    "State":"OH"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.81,35.71 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Acme McCrary",
+    "City":"Asheboro",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.52,41.78 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"AdChem Manufacturing Tech",
+    "City":"Manchester",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77,41.24 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Alcan Cable",
+    "City":"Williamsport",
+    "State":"PA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.85,42.97 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Allen Bailey",
+    "City":"Caledonia",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.7,42.56 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"American Motive Power",
+    "City":"Dansville",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83,39.96 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Ametek Solid State Controls",
+    "City":"Columbus",
+    "State":"OH"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.23,43.06 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Anderson Technologies",
+    "City":"Grand Haven",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.25,35.83 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Ann's House",
+    "City":"Robersonville",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.78,42.97 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Apex Spring and Stamping",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.31,44.27 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Appleton Coated, LLC",
+    "City":"Combined Locks",
+    "State":"WI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.41,32.24 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Atlantic Wood Industries, Inc.",
+    "City":"Vidalia",
+    "State":"GA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.78,42.87 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Auto Cast",
+    "City":"Grandville",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.24,42.67 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"BAE",
+    "City":"Auburn Hills",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.36,35.67 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Baker Furniture",
+    "City":"Hickory",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.73,39.63 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Beachley Furniture",
+    "City":"Hagerstown",
+    "State":"MD"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.52,35.09 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Besam",
+    "City":"Monroe",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.18,43.15 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Brodock Press",
+    "City":"Utica",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.49,39.06 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Brunson Instrument Company",
+    "City":"Kansas City",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.48,43.12 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Byrne Electrical",
+    "City":"Rockford",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3,37.86 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"California Closets",
+    "City":"Berkeley",
+    "State":"CA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.46,35.38 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Calsonic",
+    "City":"Shelbyville",
+    "State":"TN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.33,45.12 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Central Container Corporation",
+    "City":"Minneapolis",
+    "State":"MN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.09,42.67 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Central Metal Finishing",
+    "City":"North Andover",
+    "State":"MA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.89,34.16 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Central Moloney, Inc.",
+    "City":"Pine Bluff",
+    "State":"AR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.21,42.54 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Chemico-Birmingham",
+    "City":"Birmingham",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.83,42.69 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Chemico-Chesterfield",
+    "City":"Chesterfield",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.16,42.71 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"CIL Metal Finishing",
+    "City":"Lawrence",
+    "State":"MA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.72,40.38 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Cleaveland/Price Inc.",
+    "City":"Trafford",
+    "State":"PA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.27,38.58 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Companion Baking",
+    "City":"St.Louis",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.55,42.88 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Compatico Inc.",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.69,43.17 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Complemar, Inc",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.03,39.97 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Contemporary Graphics",
+    "City":"Pennsauken",
+    "State":"NJ"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.83,33.48 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Cox Industries, Inc.",
+    "City":"Orangeburg",
+    "State":"SC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.44,34.05 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Crown Technical Systems",
+    "City":"Ontario",
+    "State":"CA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.72,42.9 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Detail Technologies",
+    "City":"Wyoming",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.59,36.91 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"DeWitt Company",
+    "City":"Sikeston",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.84,43.03 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"DeWys Manufacturing",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.58,35.25 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Dicey Fabrics",
+    "City":"Shelby",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.12,32.7 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Diego & Son Printing, Inc.",
+    "City":"San Diego",
+    "State":"CA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.2,40.61 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Draka Cableteq USA",
+    "City":"Schuylkill Haven",
+    "State":"PA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.25,38.62 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Drumtech",
+    "City":"St. Louis",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.07,41.88 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Dymax Corporation",
+    "City":"Torrington",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.39,40.86 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"EarthColor",
+    "City":"Parsippany",
+    "State":"NJ"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.41,42.21 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Elm Plating",
+    "City":"Jackson",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.69,43.17 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Empire Precision Plastics",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.75,42.8 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Falcon Foam",
+    "City":"Byron Center",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.34,43.1 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Fleischer's Bagel",
+    "City":"Macedon",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.63,43 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Flexco",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.87,35.19 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Frontier Brake",
+    "City":"Memphis",
+    "State":"TN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.99,42.85 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Gallant North America",
+    "City":"Zeeland",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.24,32.54 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"General Cable Industries, Inc.",
+    "City":"Marshall",
+    "State":"TX"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.79,35.59 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"General Microcircuits, Inc.",
+    "City":"Mooresville",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.62,43.15 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"German Machine Tool",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.58,43.03 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Gill Industries Inc.",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.7,44.96 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Givaudan",
+    "City":"Silverton",
+    "State":"OR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.48,43.12 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Grand Rapids Controls",
+    "City":"Rockford",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.72,42.9 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Grand Rapids Foam Technologies",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.66,42.96 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Grand Rapids Spring & Stamping",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.64,43.83 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"GW Plastics, Inc. - Bethel, VT",
+    "City":"Bethel",
+    "State":"VT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.52,43.78 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"GW Plastics, Inc. - South Royalton, VT",
+    "City":"South Royalton",
+    "State":"VT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.96,32.15 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"GW Plastics, Inc. - Tucson, AZ",
+    "City":"Tucson",
+    "State":"AZ"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.78,42.87 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"H&L Advantage",
+    "City":"Grandville",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.73,41.74 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Har-Conn",
+    "City":"West Hartford",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.66,32.46 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Hart Associates, Inc. of Louisiana",
+    "City":"Ruston",
+    "State":"LA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.5,43.15 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Heirloom",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.69,42.82 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Hendrix Wire & Cable, Inc.",
+    "City":"Milford",
+    "State":"NH"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.94,42.57 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"High Liner Foods",
+    "City":"Danvers",
+    "State":"MA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.33,35.5 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Hope Industries",
+    "City":"Madisonville",
+    "State":"TN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.64,41.77 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Horst",
+    "City":"East Hartford",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.14,31.69 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Howard Industries",
+    "City":"Laurel",
+    "State":"MS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.86,36.09 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"HUF",
+    "City":"Greeneville",
+    "State":"TN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.15,42.94 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Industrial Woodworking Corporation",
+    "City":"Zeeland",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.99,42.85 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Innotech",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.76,43.03 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Irwin Seating",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.2,43.01 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"IVC Industrial Coatings",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.11,42.51 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"JD Plating",
+    "City":"Madison Heights",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.47,34.08 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Jensen Precast",
+    "City":"Fontana",
+    "State":"CA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.63,43 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Knape & Vogt",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.63,34.22 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Koppers Wood",
+    "City":"Florence",
+    "State":"SC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.36,31.97 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Kuhlman Electric",
+    "City":"Crystal Springs",
+    "State":"MS"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.35,40.72 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Lawrence Ripak",
+    "City":"West Babylon",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -65.92,18.23 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Lehigh Press",
+    "City":"Juncos",
+    "State":"PR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.2,43.01 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Light Corporation",
+    "City":"Grand Haven",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.72,42.57 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"LMC Power Systems, Inc",
+    "City":"Dansville",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.87,31.9 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Lockheed Martin",
+    "City":"Troy",
+    "State":"AL"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.65,42.93 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Master Finish Co.",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.4,43.07 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Mastercraft Industries",
+    "City":"Fairport",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.76,47.28 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"McFarland Cascade",
+    "City":"Eugene",
+    "State":"OR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.29,40.2 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"McNeil-PPC Inc.",
+    "City":"Lititz",
+    "State":"PA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.58,34.03 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Medegen",
+    "City":"Ontario",
+    "State":"CA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.42,38.08 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Meramec Electrical Products Company Inc",
+    "City":"Cuba",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.64,43.2 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Mercury Print",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.66,42.86 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Metal Components LLC",
+    "City":"Wyoming",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.92,41.68 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Metal Finishing Technologies",
+    "City":"Forestville",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.07,42.74 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Metal Standard Corp",
+    "City":"Holland",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.4,43.98 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Metal Works",
+    "City":"Ludington",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.41,42.21 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Michigan Extruded Aluminum",
+    "City":"Jackson",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.33,38.56 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Midwest Recycling Center",
+    "City":"Green Park",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.58,33.19 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Milbank Manufacturing Company, AR",
+    "City":"El Dorado",
+    "State":"AR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.41,42.21 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Miller Tool and Dye",
+    "City":"Jackson",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.28,42.49 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Millipore",
+    "City":"Bedford",
+    "State":"MA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.11,40.68 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Mitsubishi Electric Power Products",
+    "City":"Warrendale",
+    "State":"PA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.15,41.43 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Modern Metal Finishing",
+    "City":"Oxford",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.03,34.57 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Mohawk Home",
+    "City":"Sugar Valley",
+    "State":"GA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.6,43.17 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Monroe Litho",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.6,43.19 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Monroe Plating",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.73,42 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Moss, Inc",
+    "City":"Lincolnwood",
+    "State":"IL"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.64,43.09 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"MWI",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.47,38.84 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"National Cart Company Incorporated",
+    "City":"St. Charles",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.11,36.73 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"National Enzyme Company",
+    "City":"Foesyth",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.25,40.09 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"National Label",
+    "City":"Lafayette Hill",
+    "State":"PA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.7,48.98 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Nature's Path Foods",
+    "City":"Blaine",
+    "State":"WA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.01,40.64 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"New Belgium Brewing",
+    "City":"Fort Collins",
+    "State":"CO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.45,42.96 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Newtex Industries",
+    "City":"Victor",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.76,42.92 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Niagara Transformer Corp.",
+    "City":"Buffalo",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.92,42.37 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"NOSCO",
+    "City":"Gurnee",
+    "State":"IL"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.07,42.74 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Nuvar Inc.",
+    "City":"Holland",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.85,38.96 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"OmniPrint",
+    "City":"Lanham",
+    "State":"MD"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.02,34.93 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"OmniSource Southeast",
+    "City":"Spartanburg",
+    "State":"SC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.65,43.23 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Ontario Plastics",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.31,43.26 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Optimax",
+    "City":"Ontario",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -66.34,18.4 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Owens Illinois",
+    "City":"Vega Alta",
+    "State":"PR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.05,43.08 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Oxbo International Corporation",
+    "City":"Byron",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.46,45.04 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Pacific Wood Preserving of Oregon",
+    "City":"Sheridan",
+    "State":"OR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.55,39.03 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Performance Roof Systems Inc.",
+    "City":"Kansas City",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.34,43.1 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Pliant \"Bag\"",
+    "City":"Macedon",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.34,43.1 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Pliant \"Plate\"",
+    "City":"Macedon",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.34,43.1 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Pliant Corporation",
+    "City":"Macedon",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.47,34.01 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Power Partners, Inc",
+    "City":"Athens",
+    "State":"GA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83,42.46 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Precision Mold & Engineering",
+    "City":"Warren",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.17,36.3 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Preformed Line Products",
+    "City":"Rogers",
+    "State":"AR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.56,38.6 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Printflex Graphics",
+    "City":"St. Louis",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.55,42.88 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Progressive Technologies, Inc.",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.69,43.17 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Quality Containment Services",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.43,38.91 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"R & D Tool and Engineering",
+    "City":"Summit",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.69,42.89 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Rapid-Line, Inc",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.8,38.15 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Rebco, Inc.",
+    "City":"Louisville",
+    "State":"KY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.83,42.17 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Renosol",
+    "City":"Saline",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.29,35 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Republic Services",
+    "City":"Chattanooga",
+    "State":"TN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.82,40.27 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Riegel Printing Company",
+    "City":"Ewing",
+    "State":"NJ"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.69,43.17 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Rochester Steel",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.69,42.05 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"S&C Electric Company",
+    "City":"Chicago",
+    "State":"IL"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.25,40.22 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Sabre Industries",
+    "City":"Alvarado",
+    "State":"TX"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.83,45.13 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Sabroso Company",
+    "City":"Woodburn",
+    "State":"OR"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.51,43.52 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Saint-Gobain Performance Plastics",
+    "City":"Portage",
+    "State":"WI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.96,41.27 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Seaboard Metal Finishing",
+    "City":"West Haven",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.53,41.76 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Sermatech",
+    "City":"Manchester",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.2,43.01 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Shape Corporation",
+    "City":"Grand Haven",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.58,35.34 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Shelby Elastics",
+    "City":"Shelby",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.57,35.74 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Shenandoah Furniture, Inc.",
+    "City":"Valdese",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.29,33.42 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Southern States",
+    "City":"Hampton",
+    "State":"GA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.07,33.57 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Southwire Company - Carrolton, GA",
+    "City":"Carrollton",
+    "State":"GA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.07,33.57 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Southwire Company - Heflin, AL",
+    "City":"Heflin",
+    "State":"AL"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.29,38.75 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Sportsprint",
+    "City":"Ferguson",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.65,39.97 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"SPX Cooling Technologies - York, PA",
+    "City":"York",
+    "State":"PA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.65,42.13 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Sullivan Paper",
+    "City":"West Springfield",
+    "State":"MA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.08,41.67 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Summit Corp",
+    "City":"Thomaston",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.67,43.27 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Tapecon",
+    "City":"Rochester",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.28,33.63 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"TCI of Alabama, LLC",
+    "City":"Pell City",
+    "State":"AL"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.07,42.74 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Techno-Coat, Inc",
+    "City":"Holland",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.62,35.57 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Thermo Fischer Scientific",
+    "City":"Asheville",
+    "State":"NC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.61,34.96 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Thomas & Betts",
+    "City":"Albuquerque",
+    "State":"NM"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.14,43.3 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"TPI Powder Metallurgy, Inc",
+    "City":"Saint Charles",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.05,41.22 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Trans-Lite Inc",
+    "City":"Milford",
+    "State":"CT"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.27,38.69 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Triad Manufacturing, Inc.",
+    "City":"St. Louis",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.78,42.87 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Trimline Tool",
+    "City":"Grandville",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.9,32.6 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"U.S. Concrete Precast Group",
+    "City":"San Diego",
+    "State":"CA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.74,43.42 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"U.S. Felt",
+    "City":"Sanford",
+    "State":"ME"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.54,37.83 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"U.S. Tool Grinding, Inc.",
+    "City":"Desloge",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.25,38.56 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Unico",
+    "City":"St. Louis",
+    "State":"MO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.58,34.51 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"United Wood Treating Co",
+    "City":"Whitmire",
+    "State":"SC"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.19,26.15 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Universal Metal Products, Inc. - McAllen",
+    "City":"McAllen",
+    "State":"TX"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.18,42.74 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Upstate Door",
+    "City":"Warsaw",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.63,42.87 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Valley City Plating",
+    "City":"Grand Rapids",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.14,43.74 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Valley Design Enterprises, Inc",
+    "City":"Fountain",
+    "State":"MN"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.36,42.12 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Whirlpool Corporation",
+    "City":"Benton Harbor",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.84,42.93 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Williams Advanced Technologies-Buffalo",
+    "City":"Buffalo",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.84,42.93 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Williams Advanced Technologies-Wheatfield",
+    "City":"Wheatfield",
+    "State":"NY"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.59,42.3 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Wright Coating Company, Inc",
+    "City":"Kalamazoo",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.48,43.12 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"Byrne Electrical Specialists, Inc.",
+    "City":"Rockford",
+    "State":"MI"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.75,42.87 ]
+    },
+    "properties": {
+    "Type":"GSN",
+    "Organization":"H&L Advantage",
+    "City":"Grandville",
+    "State":"MI"
+    }
+  }
+]
+}
