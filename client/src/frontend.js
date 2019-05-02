@@ -5,7 +5,7 @@ import axios from "axios";
 import Map from './Map';
 import Example from './example.js';
 import Query from './Query.js';
-import Add from './Add.js';
+import AddUpdate from './Add.js';
 import Delete from './Delete.js';
 import './bootstrap.css';
 import './style.css'
@@ -17,15 +17,10 @@ class MainApp extends React.Component {
     this.state = {
       gtin: null,
       mlocation: null,
-      ingredients: [],
-      labels: [],
-      data: [],
-      id: 0,
-      message: null,
-      intervalIsSet: false,
-      idToDelete: null,
-      idToUpdate: null,
-      objectToUpdate: null
+      prodName: null,
+      editorName: null,
+      brandName: null,
+      data: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -34,13 +29,21 @@ class MainApp extends React.Component {
         <Delete parentChange={(e)=>this.handleChange(e)} parentClick={(e)=>this.deleteFromDB(e)} />
       );
     };
+    this.AddUpdateComponent = () => {
+      return (
+        <AddUpdate parentChange={(e)=>this.handleChange(e)} parentClickAdd={(e)=>this.putDataToDB(e)} parentClickUpdate={(e)=>this.updateDB(e)} />
+      );
+    };
+    this.QueryComponent = () => {
+      return (
+        <Query parentChange={(e)=>this.handleChange(e)} parentClick={(e)=>this.handleSubmit(e)} />
+      );
+    };
   }
 
   handleSubmit(e){
     e.preventDefault();
     let mongoQuery = "?id=" + this.state.gtin.toString();
-    // create the mongo query in the logic here
-    // 0016229004019
     this.getDataFromDb(mongoQuery);
     console.log("submited: ", mongoQuery)
   }
@@ -49,10 +52,11 @@ class MainApp extends React.Component {
     let field = e.target.name;
     let value = e.target.value;
     console.log(field);
-    if (field === "Universal Product Code"){this.setState({gtin: value}, console.log("State for ", field, " uppdated to: ", this.state.gtin));};
-    if (field === "Manufacturing Location"){this.setState({mlocation: value}, console.log("State for ", field, " uppdated to: ", this.state.mlocation))}
-    if (field === "Ingredients"){this.setState({ingredients: value}, console.log("State for ", field, " uppdated to: ", this.state.ingredients))}
-    if (field === "Labels"){this.setState({labels: value}, console.log("State for ", field, " uppdated to: ", this.state.labels))}
+    if (field === "Universal Product Code"){this.setState({gtin: value})};
+    if (field === "Manufacturing Location"){this.setState({mlocation: value})};
+    if (field === "Product Name"){this.setState({prodName: value})};
+    if (field === "Editor Name"){this.setState({editorName: value})};
+    if (field === "Brand Name"){this.setState({brandName: value})};
   }
   // when component mounts, first thing it does is fetch all existing data in our db
   // then we incorporate a polling logic so that we can easily see if our db has
@@ -94,26 +98,36 @@ class MainApp extends React.Component {
   // to create new query into our data base
   // update page after or just modal?
   putDataToDB = () => {
+    let id = this.state.gtin;
+    let brand = this.state.brandName;
+    let manu = this.state.mlocation;
+    let prod = this.state.prodName;
+    let editor = this.state.editorName;
     let url = "http://localhost:27017/api/putData"
     axios.post(url, {
-      id: 123456789013,
-      brands: "TESTPOST",
-      manufacturing_places: "TESTPOST",
-      product_name: "TESTPOST",
-      last_editor: "TESTPOST"
-    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Post worked!")});
+      id: parseInt(id),
+      brands: brand,
+      manufacturing_places: manu,
+      product_name: prod,
+      last_editor: editor
+    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Data Post worked!")});
   };
 
   // our update method that uses our backend api
   // to overwrite existing data base information
   updateDB = () => {
+    let id = this.state.gtin;
+    let brand = this.state.brandName;
+    let manu = this.state.mlocation;
+    let prod = this.state.prodName;
+    let editor = this.state.editorName;
     let url = "http://localhost:27017/api/updateData";
     axios.post(url, {
-      id: 123456789013,
-      brands: "TESTupdatePOST",
-      manufacturing_places: "TESTupdatePOST",
-      product_name: "TESTupdatePOST",
-      last_editor: "TESTupdatePOST"
+      id: parseInt(id),
+      brands: brand,
+      manufacturing_places: manu,
+      product_name: prod,
+      last_editor: editor
     }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Update Post worked!")});
   };
 
@@ -122,10 +136,10 @@ class MainApp extends React.Component {
   deleteFromDB = () => {
     console.log("deleting", this.state.gtin)
     let url = "http://localhost:27017/api/deleteData";
-    const idToDelete = this.state.gtin
+    let idToDelete = this.state.gtin;
     axios.delete(url, {
       data: {
-        id: idToDelete
+        id: parseInt(idToDelete)
       }
     }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Deleted: ", res)});
   };
@@ -144,9 +158,8 @@ class MainApp extends React.Component {
         <Link to={'/delete'}>Delete Data</Link>
           <div className="row">
               <Switch>
-                  <Route exact path='/queryResults' component={Query} />
-                  <Route exact path='/addUpdate' component={Add} />
-                  // the issue is  here with the arrow function
+                  <Route exact path='/queryResults' component={this.QueryComponent} />
+                  <Route exact path='/addUpdate' component={this.AddUpdateComponent} />
                   <Route exact path='/delete' component={this.DeleteComponent} />
               </Switch>
             <div className="col-md-8">
