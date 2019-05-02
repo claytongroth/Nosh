@@ -1,7 +1,12 @@
 // /client/App.js
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import axios from "axios";
 import Map from './Map';
+import Example from './example.js';
+import Query from './Query.js';
+import Add from './Add.js';
+import Delete from './Delete.js';
 import './bootstrap.css';
 import './style.css'
 
@@ -24,7 +29,13 @@ class MainApp extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.DeleteComponent = () => {
+      return (
+        <Delete parentChange={(e)=>this.handleChange(e)} parentClick={(e)=>this.deleteFromDB(e)} />
+      );
+    };
   }
+
   handleSubmit(e){
     e.preventDefault();
     let mongoQuery = "?id=" + this.state.gtin.toString();
@@ -34,6 +45,7 @@ class MainApp extends React.Component {
     console.log("submited: ", mongoQuery)
   }
   handleChange(e){
+    console.log("handleChange fired")
     let field = e.target.name;
     let value = e.target.value;
     console.log(field);
@@ -80,120 +92,70 @@ class MainApp extends React.Component {
 
   // our put method that uses our backend api
   // to create new query into our data base
-  putDataToDB = message => {
-    let currentIds = this.state.data.map(data => data.id);
-    let idToBeAdded = 0;
-    while (currentIds.includes(idToBeAdded)) {
-      ++idToBeAdded;
-    }
-    axios.post("http://localhost:27017/api/putData", {
-      id: idToBeAdded,
-      message: message
-    });
+  // update page after or just modal?
+  putDataToDB = () => {
+    let url = "http://localhost:27017/api/putData"
+    axios.post(url, {
+      id: 123456789013,
+      brands: "TESTPOST",
+      manufacturing_places: "TESTPOST",
+      product_name: "TESTPOST",
+      last_editor: "TESTPOST"
+    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Post worked!")});
   };
-  // our delete method that uses our backend api
-  // to remove existing database information
-  deleteFromDB = idTodelete => {
-    let objIdToDelete = null;
-    this.state.data.forEach(dat => {
-      if (dat.id == idTodelete) {
-        objIdToDelete = dat._id;
-      }
-    });
-    axios.delete("http://localhost:27017/api/deleteData", {
-      data: {
-        id: objIdToDelete
-      }
-    });
-  };
+
   // our update method that uses our backend api
   // to overwrite existing data base information
-  updateDB = (idToUpdate, updateToApply) => {
-    let objIdToUpdate = null;
-    this.state.data.forEach(dat => {
-      if (dat.id == idToUpdate) {
-        objIdToUpdate = dat._id;
-      }
-    });
-
-    axios.post("http://localhost:27017/api/updateData", {
-      id: objIdToUpdate,
-      update: { message: updateToApply }
-    });
+  updateDB = () => {
+    let url = "http://localhost:27017/api/updateData";
+    axios.post(url, {
+      id: 123456789013,
+      brands: "TESTupdatePOST",
+      manufacturing_places: "TESTupdatePOST",
+      product_name: "TESTupdatePOST",
+      last_editor: "TESTupdatePOST"
+    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Update Post worked!")});
   };
+
+  // our delete method that uses our backend api
+  // to remove existing database information
+  deleteFromDB = () => {
+    console.log("deleting", this.state.gtin)
+    let url = "http://localhost:27017/api/deleteData";
+    const idToDelete = this.state.gtin
+    axios.delete(url, {
+      data: {
+        id: idToDelete
+      }
+    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Deleted: ", res)});
+  };
+
 
   render() {
    return (
       <div>
+      <Router>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <div className="container-fluid">
-          {this.state.data[0] ? this.state.data[0].manufacturing_places: "places here"}
+        <Link to={'/queryResults'}>Query Existing</Link>
+        <Link to={'/addUpdate'}>Add/Update Data</Link>
+        <Link to={'/delete'}>Delete Data</Link>
           <div className="row">
-            <div className="col-md-4">
-              <h3 className="text-center">
-                Nosh
-              </h3>
-              <form className="form-horizontal">
-                <fieldset>
-                  {/* Text input*/}
-                  <div className="form-group">
-                    <label className="col-md-12 control-label" htmlFor="Universal Product Code">Universal Product Code</label>
-                    <div className="col-md-12">
-                      <input onChange={(e)=>this.handleChange(e)} className="form-control input-md" id="Universal Product Code" name="Universal Product Code" placeholder="(GTIN-12)" type="text" />
-                    </div>
-                  </div>{/* Search input*/}
-                  <div className="form-group">
-                    <label className="col-md-12 control-label" htmlFor="Manufacturing Location">Manufacturing Location</label>
-                    <div className="col-md-12">
-                      <input onChange={(e)=>this.handleChange(e)} className="form-control input-md" id="Manufacturing Location" name="Manufacturing Location" placeholder="Address" type="search" />
-                    </div>
-                  </div>{/* Select Multiple */}
-                  <div className="form-group">
-                    <label className="col-md-12 control-label" htmlFor="Ingredients">Ingredients</label>
-                    <div className="col-md-12">
-                      <select onChange={(e)=>this.handleChange(e)} className="form-control" id="Ingredients" multiple="multiple" name="Ingredients">
-                        <option value="soy">
-                          Soy
-                        </option>
-                        <option value="wheat">
-                          Wheat
-                        </option>
-                        <option value="etc.">
-                          etc.
-                        </option>
-                      </select>
-                    </div>
-                  </div>{/* Multiple Checkboxes */}
-                  <div className="form-group">
-                    <label className="col-md-12 control-label" htmlFor="Labels">Labels</label>
-                    <div className="col-md-12">
-                      <div className="checkbox">
-                        <label onChange={(e)=>this.handleChange(e)} htmlFor="Labels-0"><input id="Labels-0" name="Labels" type="checkbox" defaultValue="organic" /> Certified Organic</label>
-                      </div>
-                      <div className="checkbox">
-                        <label onChange={(e)=>this.handleChange(e)} htmlFor="Labels-1"><input id="Labels-1" name="Labels" type="checkbox" defaultValue="etc" /> etc.</label>
-                      </div>
-                      <div className="checkbox">
-                        <label  onChange={(e)=>this.handleChange(e)} htmlFor="Labels-2"><input id="Labels-2" name="Labels" type="checkbox" defaultValue="etc" /> etc.</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="col-md-12 control-label" htmlFor="Submit" />
-                    <div className="col-md-12">
-                      <button className="btn btn-primary" id="Submit" name="Submit" onClick={(e)=>this.handleSubmit(e)}>Submit</button> <button className="btn btn-warning" id="Clear" name="Clear">Clear</button>
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
+              <Switch>
+                  <Route exact path='/queryResults' component={Query} />
+                  <Route exact path='/addUpdate' component={Add} />
+                  // the issue is  here with the arrow function
+                  <Route exact path='/delete' component={this.DeleteComponent} />
+              </Switch>
             <div className="col-md-8">
                 <Map markerPosition={this.state.data[0] ? this.state.data[0].manufacturing_places: "places here"} test ={this.state.data} />
             </div>
           </div>
         </div>
+
+      </Router>
       </div>
     );
   }

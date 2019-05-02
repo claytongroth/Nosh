@@ -3,10 +3,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // this will be our data base's data structure
+//The permitted SchemaTypes are:
+//String, Number, Date, Boolean, ObjectId, Array…
 const DataSchema = new Schema(
   {
     id: Number,
-    message: String
+    brands: String,
+    manufacturing_places: String,
+    product_name: String,
+    last_editor: String,
   },
   { timestamps: true }
 );
