@@ -13,7 +13,7 @@ const router = express.Router();
 
 // this is our MongoDB database
 // this could also connect to a hosted mongo DB like //const dbRoute = "mongodb+srv://clustertest-xymjq.mongodb.net/test"
-const dbRoute = "mongodb://127.0.0.1:27017/noshdb";
+const dbRoute = "mongodb://127.0.0.1:27017/food"; //noshdb
 // connects our back end code with the database
 
 mongoose.connect(
@@ -25,17 +25,6 @@ let db = mongoose.connection;
 let dbdata;
 
 db.on('error', console.error.bind(console, 'connection error:'));
-/*
-// quickly test results below
-db.once('open', function () {
-    db.db.collection("UnitedStatesOnly", function(err, collection){
-        collection.find({"_id": "0000000035590"}).toArray(function(err, data){
-            dbdata = data
-        })
-    });
-});
-*/
-
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
@@ -45,10 +34,9 @@ app.use(logger("dev"));
 
 //getData/query?id=0000000035590&brands=Taste%20Adventure
 router.get("/getData", (req, res) => {
-  var giveData;
   var id = req.query.id;
 
-  db.db.collection('USFoodOnly',function(err, data){
+  db.db.collection('USonly',function(err, data){
     if(err){
       throw err;
     }
@@ -61,48 +49,85 @@ router.get("/getData", (req, res) => {
     }
   })
 });
-
+// this is our create methid
+// this method adds new data in our database
+//putData/query?id=0000000035590&brands=Claytons%20Adventure&manufacturing_places=golden%20colorado&product_name=swolecakes&editor=clayton%20groth
+//db.products.insert( { item: "card", qty: 15 } )
+router.post("/putData", (req, res) => {
+  console.log("put fired");
+  let data = new Data();
+//  const { id, message } = req.body;
+  const id = req.body.id;
+  const brands = req.body.brands;
+  const manu = req.body.manufacturing_places;
+  const prodName  = req.body.product_name;
+  const editor = req.body.last_editor;
+  db.db.collection('USonly',function(err, data){
+    if(err){console.log("Error posting,")}
+    else {
+      data.insertOne({
+        "_id": id,
+        "brands": brands,
+        "manufacturing_places": manu,
+        "product_name": prodName,
+        "last_editor": editor
+      }).then(data => res.send(data)).catch((err) => {
+        console.log(err);
+        res.send(err);
+      });
+    }
+  })
+});
 
 // this is our update method
 // this method overwrites existing data in our database
 router.post("/updateData", (req, res) => {
-  const { id, update } = req.body;
-  Data.findOneAndUpdate(id, update, err => {
-    if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true });
-  });
+  const id = req.body.id;
+  const brands = req.body.brands;
+  const manu = req.body.manufacturing_places;
+  const prodName  = req.body.product_name;
+  const editor = req.body.last_editor;
+  db.db.collection('USonly',function(err, data){
+    if(err){console.log("Error posting", err)}
+    else {
+      data.findOneAndUpdate({
+        "_id": id,
+      },
+      {$set: {
+        "brands": brands,
+        "manufacturing_places": manu,
+        "product_name": prodName,
+        "last_editor": editor
+      }
+      },
+       {upsert: true}).then(data => res.send(data)).catch((err) => {
+        console.log(err);
+        res.send(err);
+      });
+    }
+  })
 });
 
 // this is our delete method
 // this method removes existing data in our database
 router.delete("/deleteData", (req, res) => {
-  const { id } = req.body;
-  Data.findOneAndDelete(id, err => {
-    if (err) return res.send(err);
-    return res.json({ success: true });
-  });
+  const id = req.body.id;
+  console.log(id)
+  db.db.collection('USonly',function(err, data){
+    if(err){console.log("Error posting", err)}
+    else {
+      data.findOneAndDelete({
+        "_id": id,
+      }).then(data => res.send(data)).catch((err) => {
+        console.log(err);
+        res.send(err);
+      });
+    }
+  })
+
 });
 
-// this is our create methid
-// this method adds new data in our database
-router.post("/putData", (req, res) => {
-  let data = new Data();
 
-  const { id, message } = req.body;
-
-  if ((!id && id !== 0) || !message) {
-    return res.json({
-      success: false,
-      error: "INVALID INPUTS"
-    });
-  }
-  data.message = message;
-  data.id = id;
-  data.save(err => {
-    if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true });
-  });
-});
 
 // append /api for our http requests
 app.use("/api", router);

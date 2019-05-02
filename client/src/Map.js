@@ -71,7 +71,7 @@ class Map extends React.Component {
   response => {
     const address = response.results[0].formatted_address;
     L.marker([position.coords.latitude, position.coords.longitude]).addTo(Window.map).bindPopup(address);
-    
+
   },
   error => {
     console.error(error);
@@ -82,7 +82,7 @@ class Map extends React.Component {
 
 //geojson data import via leaflet-ajax lib
 //var e3Layer = new L.GeoJSON.AJAX(e3, {
-//		
+//
 //	}).addTo(Window.map);
 //var gsnLayer = new L.GeoJSON.AJAX(gsn, {
 //		pointToLayer: pointToLayer
@@ -99,9 +99,9 @@ class Map extends React.Component {
 		}
         return L.circleMarker(latlng, geojsonMarkerOptions);
     }
-    
+
   }
-   
+
 
 componentDidUpdate() {
     //geocode and draw queried item from item id passed in from the frontend.js component
