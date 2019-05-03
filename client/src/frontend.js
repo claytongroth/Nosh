@@ -93,7 +93,9 @@ class MainApp extends React.Component {
     fetch(url) //  Query format here: fetch("http://localhost:27017/api/getData" + "?id=234234324342&brands=Taste%20Adventure")"?id=0000000035590&brands=Taste%20Adventure"
     //.then(data => data.text()).then(data => console.log(data))
     .then(data => data.json())
-    .then(answer => this.setState({ data: answer }, console.log(this.state.data)));
+    .then(answer => this.setState({ data: answer },
+      this.state.data.length == 0 ? this.showModal("query", null, "There is no record matching the ID you entered.") : console.log("Queried record: ", this.state.data[0])
+    ));
   };
 
   // our put method that uses our backend api
@@ -112,7 +114,9 @@ class MainApp extends React.Component {
       manufacturing_places: manu,
       product_name: prod,
       last_editor: editor
-    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): this.showModal("add", JSON.parse(res.config.data).product_name) });
+    }).then(res => {
+       res.data.errmsg ?  this.showModal("add", null, res.data.errmsg) : this.showModal("add", JSON.parse(res.config.data).product_name)
+     });
   };
   //config.data
   // our update method that uses our backend api
@@ -130,25 +134,32 @@ class MainApp extends React.Component {
       manufacturing_places: manu,
       product_name: prod,
       last_editor: editor
-    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): this.showModal("update", res.data.value.product_name)});
+    }).then(res => {
+      console.log(res)
+       res.data.errmsg ? this.showModal("update", null, res.data.errmsg) : this.showModal("update", res.data.value.product_name + " Updated existing: " + res.data.lastErrorObject.updatedExisting)
+       //res.data.lastErrorObject.updatedExisting
+     });
   };
 
   // our delete method that uses our backend api
   // to remove existing database information
   deleteFromDB = () => {
-    console.log("deleting", this.state.gtin)
+    console.log("Try to delete: ", this.state.gtin)
     let url = "http://localhost:27017/api/deleteData";
     let idToDelete = this.state.gtin;
     axios.delete(url, {
       data: {
         id: idToDelete
       }
-    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): this.showModal("delete", res.data.value.product_name)});
+    }).then(res => {
+      res.data.value == null ? this.showModal("delete", null, "Possible non-existent ID") : this.showModal("delete", res.data.value.product_name) })
   };
   //operation, product_name
-  showModal = (operation, product_name ) => {
+  //catch the ret as well
+  showModal = (operation, product_name, err) => {
+    console.log(err)
     let message;
-    if (typeof product_name !== 'undefined'){
+    if (typeof product_name !== 'undefined' && product_name !== null){
       switch(operation){
         case "add":
           message = "Succesfully Added Product: " + product_name
@@ -163,20 +174,23 @@ class MainApp extends React.Component {
     } else {
       switch(operation){
         case "add":
-          message = "There was an issue adding the product."
+          message = "There was an issue adding the product. " + err
           break;
         case "update":
-          message = "There was an issue updating the product."
+          message = "There was an issue updating the product. " + err
           break;
         case "delete":
-          message = "There was an issue deleting the product."
+          message = "There was an issue deleting the product. " + err
+          break;
+        case "query":
+          message = "There was an issue querying the product. " + err
           break;
       }
     }
     this.setState({ modalMessage: message });
     this.setState({ modalShow: true });
-
   }
+
   hideModal = () =>{
     this.setState({ modalShow: false });
   }
