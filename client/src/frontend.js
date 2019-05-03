@@ -1,6 +1,8 @@
 // /client/App.js
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 import axios from "axios";
 import Map from './Map';
 import Query from './Query.js';
@@ -14,6 +16,8 @@ class MainApp extends React.Component {
   constructor(props, context) {
   super(props, context);
     this.state = {
+      modalShow: false,
+      modalMessage: "",
       gtin: null,
       mlocation: null,
       prodName: null,
@@ -47,10 +51,9 @@ class MainApp extends React.Component {
     console.log("submited: ", mongoQuery)
   }
   handleChange(e){
-    console.log("handleChange fired")
     let field = e.target.name;
     let value = e.target.value;
-    console.log(field);
+    console.log(field + " changed");
     if (field === "Universal Product Code"){this.setState({gtin: value})};
     if (field === "Manufacturing Location"){this.setState({mlocation: value})};
     if (field === "Product Name"){this.setState({prodName: value})};
@@ -88,9 +91,9 @@ class MainApp extends React.Component {
     let url = "http://localhost:27017/api/getData" + query
     console.log("getDataFromDb Fired with URL: ", url)
     fetch(url) //  Query format here: fetch("http://localhost:27017/api/getData" + "?id=234234324342&brands=Taste%20Adventure")"?id=0000000035590&brands=Taste%20Adventure"
-    .then(data => data.text()).then(data => console.log(data))
-    //.then(data => data.json())
-    //.then(answer => this.setState({ data: answer }, console.log(this.state.data)));
+    //.then(data => data.text()).then(data => console.log(data))
+    .then(data => data.json())
+    .then(answer => this.setState({ data: answer }, console.log(this.state.data)));
   };
 
   // our put method that uses our backend api
@@ -109,9 +112,9 @@ class MainApp extends React.Component {
       manufacturing_places: manu,
       product_name: prod,
       last_editor: editor
-    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Data Post worked!")});
+    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): this.showModal("add", JSON.parse(res.config.data).product_name) });
   };
-
+  //config.data
   // our update method that uses our backend api
   // to overwrite existing data base information
   updateDB = () => {
@@ -127,7 +130,7 @@ class MainApp extends React.Component {
       manufacturing_places: manu,
       product_name: prod,
       last_editor: editor
-    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Update Post worked!")});
+    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): this.showModal("update", res.data.value.product_name)});
   };
 
   // our delete method that uses our backend api
@@ -140,13 +143,55 @@ class MainApp extends React.Component {
       data: {
         id: idToDelete
       }
-    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Deleted: ", res)});
+    }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): this.showModal("delete", res.data.value.product_name)});
   };
+  //operation, product_name
+  showModal = (operation, product_name ) => {
+    let message;
+    if (typeof product_name !== 'undefined'){
+      switch(operation){
+        case "add":
+          message = "Succesfully Added Product: " + product_name
+          break;
+        case "update":
+          message = "Succesfully Updated Product: " + product_name
+          break;
+        case "delete":
+          message = "Succesfully Deleted Product: " + product_name
+          break;
+      }
+    } else {
+      switch(operation){
+        case "add":
+          message = "There was an issue adding the product."
+          break;
+        case "update":
+          message = "There was an issue updating the product."
+          break;
+        case "delete":
+          message = "There was an issue deleting the product."
+          break;
+      }
+    }
+    this.setState({ modalMessage: message });
+    this.setState({ modalShow: true });
 
-
+  }
+  hideModal = () =>{
+    this.setState({ modalShow: false });
+  }
   render() {
    return (
       <div>
+      <Modal show={this.state.modalShow} onHide={this.hideModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Nosh</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{this.state.modalMessage}</Modal.Body>
+        <Modal.Footer>
+          <button className="btn btn-primary" id="ok" name="ok" onClick={this.hideModal}>Ok</button>
+        </Modal.Footer>
+      </Modal>
       <Router>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
