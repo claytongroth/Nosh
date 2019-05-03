@@ -13,7 +13,7 @@ class OldApp extends Component {
   render() {
     return (
       <div className="col">
-        <h1>Nosh</h1>
+        <h1 >Nosh</h1>
         <Frontend/>
       </div>
     );

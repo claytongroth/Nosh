@@ -12,7 +12,7 @@ class Query extends React.Component {
     this.props.parentChange(e);
   }
   componentDidMount(){
-    console.log("rendered Add")
+    console.log("rendered Query")
   }
   render(){
     return (

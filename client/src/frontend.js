@@ -21,6 +21,9 @@ class MainApp extends React.Component {
       brandName: null,
       data: []
     };
+    this.tabSwitch = (event) => {
+      event.currentTarget.parentNode.click();
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.DeleteComponent = () => {
@@ -144,6 +147,8 @@ class MainApp extends React.Component {
   };
 
 
+
+
   render() {
    return (
       <div>
@@ -152,9 +157,14 @@ class MainApp extends React.Component {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <div className="container-fluid">
-        <Link to={'/'}>Query Existing</Link>
-        <Link to={'/addUpdate'}>Add/Update Data</Link>
-        <Link to={'/delete'}>Delete Data</Link>
+       <div className="switch-field col-md-4">
+       <input type="radio" className="stv-radio-tab" name="radioTabTest" value="1" id="tab1" defaultChecked />
+       <label htmlFor="tab1"><Link onClick={this.tabSwitch} to={'/'}>Query Existing</Link></label>
+       <input type="radio" className="stv-radio-tab" name="radioTabTest" value="2" id="tab2" />
+       <label htmlFor="tab2"><Link onClick={this.tabSwitch} to={'/addUpdate'}>Add/Update Data</Link></label>
+       <input type="radio" className="stv-radio-tab" name="radioTabTest" value="3" id="tab3" />
+       <label htmlFor="tab3"><Link onClick={this.tabSwitch} to={'/delete'}>Delete Data</Link></label>
+       </div>
           <div className="row">
               <Switch>
                   <Route exact path='/' component={this.QueryComponent} />

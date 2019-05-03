@@ -3,9 +3,57 @@ html{
 }
 
 #map {
-	height: 100vh;
+	height: 80vh;
 }
 
 #Submit, #Clear{
     cursor: pointer;
+}
+
+.switch-field {
+	display: flex;
+	margin-bottom: 36px;
+	overflow: hidden;
+     text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	color: rgba(0, 0, 0, 0.6);
+	line-height: 1;
+	text-align: center;
+	padding: 5px 5px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	transition: all 0.1s ease-in-out;
+    border-radius: 5px 5px 0 0;
+    
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+    background-color: #fff;
+	box-shadow: 0 3px 0 -1px #fff,
+       inset 0 5px 0 -1px #13CD4A;
+    border-bottom-style: none;
+    
+}
+
+
+
+.switch-field a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font: Helvetica, sans-serif;
 }

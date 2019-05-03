@@ -11,6 +11,7 @@ import e3 from './json/e3_USstatepolys.geojson';
 import gsn from './json/GSNpoints.geojson';
 import { AntPath, antPath } from 'leaflet-ant-path';
 import '@elfalem/leaflet-curve';
+import 'font-awesome/css/font-awesome.css';
 Geocode.setApiKey("AIzaSyCEsvEY5TsylaZu9oJLxAidDE2gbgpf2_I");
 
 //default icon
