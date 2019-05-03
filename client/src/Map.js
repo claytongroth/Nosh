@@ -123,11 +123,6 @@ componentDidUpdate() {
           navigator.geolocation.getCurrentPosition((position)=>{
             Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
               response => {
-                     if (typeof (Number.prototype.toRad) === "undefined") {
-    Number.prototype.toRad = function () {
-        return this * Math.PI / 180;
-    }
-}
 //-- Define radius function
 if (typeof (Number.prototype.toRad) === "undefined") {
     Number.prototype.toRad = function () {
@@ -161,10 +156,7 @@ function middlePoint(lat1, lng1, lat2, lng2) {
     return [lat3.toDeg(), lng3.toDeg()];
 } 
                 //var distanceLine = new L.Polyline.AntPath([[lat, lng],[position.coords.latitude, position.coords.longitude]]).addTo(Window.map);
-                var distanceCurve = antPath(['M',[lat, lng],
-            					   'Q',middlePoint(lat, lng, position.coords.latitude, position.coords.longitude),
-            						   [L.latLng(Window.map.getCenter()).lat,L.latLng(Window.map.getCenter()).lng],
-            					   'T',[position.coords.latitude, position.coords.longitude]], {use: L.curve, color: "blue", animate: 3000}).addTo(Window.map);
+                var distanceCurve = antPath(['M',[lat, lng], 'Q',middlePoint(lat+1, lng, position.coords.latitude+1, position.coords.longitude), [position.coords.latitude, position.coords.longitude]], {use: L.curve, color: "blue", animate: 3000}).addTo(Window.map);
               },
               error => {
                 console.error(error);
