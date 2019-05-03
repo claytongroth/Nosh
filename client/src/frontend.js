@@ -64,15 +64,12 @@ class MainApp extends React.Component {
     .then(data => data.json())
     .then(answer => this.setState({ data: answer },
       //console.log(answer)
-      //[""0""].product_name
-      // catching this error is on hold because of an issue where the first submit click does not store data in state.
       answer.length == 0 ? this.showModal("query", null, "There is no record matching the ID you entered.") : console.log("Queried record: ", answer)
     ));
   };
 
   // our put method that uses our backend api
   // to create new query into our data base
-  // update page after or just modal?
   putDataToDB = () => {
     let id = this.state.gtin;
     let brand = this.state.brandName;
@@ -90,7 +87,7 @@ class MainApp extends React.Component {
        res.data.errmsg ?  this.showModal("add", null, res.data.errmsg) : this.showModal("add", JSON.parse(res.config.data).product_name)
      });
   };
-  //config.data
+
   // our update method that uses our backend api
   // to overwrite existing data base information
   updateDB = () => {
@@ -109,7 +106,6 @@ class MainApp extends React.Component {
     }).then(res => {
       console.log(res)
        res.data.errmsg ? this.showModal("update", null, res.data.errmsg) : this.showModal("update", res.data.value.product_name + " Updated existing: " + res.data.lastErrorObject.updatedExisting)
-       //res.data.lastErrorObject.updatedExisting
      });
   };
 
