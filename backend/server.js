@@ -35,11 +35,8 @@ app.use(logger("dev"));
 //getData/query?id=0000000035590&brands=Taste%20Adventure
 router.get("/getData", (req, res) => {
   var id = req.query.id;
-
   db.db.collection('USonly',function(err, data){
-    if(err){
-      throw err;
-    }
+    if(err){throw err;}
     else {
       data.find({"_id": id}).toArray(function(error, documents) {
           if (err) throw error;

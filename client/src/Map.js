@@ -106,30 +106,29 @@ class Map extends React.Component {
 componentDidUpdate() {
     //geocode and draw queried item from item id passed in from the frontend.js component
     Geocode.fromAddress(this.props.markerPosition).then(
-  response => {
-    const { lat, lng } = response.results[0].geometry.location;
-    if(this.props.markerPosition != "places here"){
-    L.marker([lat, lng]).addTo(Window.map).bindPopup("Item ID: "+JSON.stringify(this.props.test[0]._id)+"<br>"+"Proudct Name:  "+JSON.stringify(this.props.test[0].product_name)+"<br>"+"Brands: "+JSON.stringify(this.props.test[0].brands)+"<br>"+"Purchase Places: "+JSON.stringify(this.props.test[0].purchase_places));
-    navigator.geolocation.getCurrentPosition((position)=>{
-        Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
-  response => {
-    //var distanceLine = new L.Polyline.AntPath([[lat, lng],[position.coords.latitude, position.coords.longitude]]).addTo(Window.map);
-    var antCurve = antPath(['M',[lat, lng],
-					   'Q',[53.41771713379898,-113.55468750000001],
-						   [39.75154536393759,-89.56054687500001],
-					   'T',[position.coords.latitude, position.coords.longitude]], {use: L.curve, color: "blue", animate: 3000}).addTo(Window.map);
-  },
-  error => {
-    console.error(error);
-  }
-);
-    });
+      response => {
+      const { lat, lng } = response.results[0].geometry.location;
+      if(this.props.markerPosition != "places here"){
+          L.marker([lat, lng]).addTo(Window.map).bindPopup("Item ID: "+JSON.stringify(this.props.test[0]._id)+"<br>"+"Proudct Name:  "+JSON.stringify(this.props.test[0].product_name)+"<br>"+"Brands: "+JSON.stringify(this.props.test[0].brands)+"<br>"+"Purchase Places: "+JSON.stringify(this.props.test[0].purchase_places));
+          navigator.geolocation.getCurrentPosition((position)=>{
+            Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
+              response => {
+                //var distanceLine = new L.Polyline.AntPath([[lat, lng],[position.coords.latitude, position.coords.longitude]]).addTo(Window.map);
+                var antCurve = antPath(['M',[lat, lng],
+            					   'Q',[53.41771713379898,-113.55468750000001],
+            						   [39.75154536393759,-89.56054687500001],
+            					   'T',[position.coords.latitude, position.coords.longitude]], {use: L.curve, color: "blue", animate: 3000}).addTo(Window.map);
+              },
+              error => {
+                console.error(error);
+              });
+        });
+      }
+    },
+    error => {
+      console.error(error);
     }
-  },
-  error => {
-    console.error(error);
-  }
-);
+  );
 }
   render() {
     return <div id="map" />;

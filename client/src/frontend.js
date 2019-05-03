@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import axios from "axios";
 import Map from './Map';
-import Example from './example.js';
 import Query from './Query.js';
 import AddUpdate from './Add.js';
 import Delete from './Delete.js';
@@ -89,9 +88,9 @@ class MainApp extends React.Component {
     let url = "http://localhost:27017/api/getData" + query
     console.log("getDataFromDb Fired with URL: ", url)
     fetch(url) //  Query format here: fetch("http://localhost:27017/api/getData" + "?id=234234324342&brands=Taste%20Adventure")"?id=0000000035590&brands=Taste%20Adventure"
-    //.then(data => data.text()).then(data => console.log(data))
-    .then(data => data.json())
-    .then(answer => this.setState({ data: answer }, console.log(this.state.data)));
+    .then(data => data.text()).then(data => console.log(data))
+    //.then(data => data.json())
+    //.then(answer => this.setState({ data: answer }, console.log(this.state.data)));
   };
 
   // our put method that uses our backend api
@@ -105,7 +104,7 @@ class MainApp extends React.Component {
     let editor = this.state.editorName;
     let url = "http://localhost:27017/api/putData"
     axios.post(url, {
-      id: parseInt(id),
+      id: id,
       brands: brand,
       manufacturing_places: manu,
       product_name: prod,
@@ -123,7 +122,7 @@ class MainApp extends React.Component {
     let editor = this.state.editorName;
     let url = "http://localhost:27017/api/updateData";
     axios.post(url, {
-      id: parseInt(id),
+      id: id,
       brands: brand,
       manufacturing_places: manu,
       product_name: prod,
@@ -139,7 +138,7 @@ class MainApp extends React.Component {
     let idToDelete = this.state.gtin;
     axios.delete(url, {
       data: {
-        id: parseInt(idToDelete)
+        id: idToDelete
       }
     }).then(res => { res.data.errmsg ? console.log(res.data.errmsg): console.log("Deleted: ", res)});
   };
@@ -153,12 +152,12 @@ class MainApp extends React.Component {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <div className="container-fluid">
-        <Link to={'/queryResults'}>Query Existing</Link>
+        <Link to={'/'}>Query Existing</Link>
         <Link to={'/addUpdate'}>Add/Update Data</Link>
         <Link to={'/delete'}>Delete Data</Link>
           <div className="row">
               <Switch>
-                  <Route exact path='/queryResults' component={this.QueryComponent} />
+                  <Route exact path='/' component={this.QueryComponent} />
                   <Route exact path='/addUpdate' component={this.AddUpdateComponent} />
                   <Route exact path='/delete' component={this.DeleteComponent} />
               </Switch>
