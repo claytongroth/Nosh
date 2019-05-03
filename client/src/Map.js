@@ -3,6 +3,8 @@ import L from "leaflet";
 import 'leaflet/dist/leaflet.css';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import foodicon from 'leaflet/dist/images/marker-icon-food.png';
+import homeicon from 'leaflet/dist/images/marker-icon-home.png';
 import Geocode from "react-geocode";
 import 'leaflet-easybutton';
 import 'leaflet-ajax';
@@ -11,6 +13,7 @@ import e3 from './json/e3_USstatepolys.geojson';
 import gsn from './json/GSNpoints.geojson';
 import { AntPath, antPath } from 'leaflet-ant-path';
 import '@elfalem/leaflet-curve';
+import 'font-awesome/css/font-awesome.css'
 Geocode.setApiKey("AIzaSyCEsvEY5TsylaZu9oJLxAidDE2gbgpf2_I");
 
 //default icon
@@ -20,6 +23,20 @@ let DefaultIcon = L.icon({
     iconSize: [25,41],
     iconAnchor: [12.5 ,41],
     popupAnchor: [0, -41]
+});
+//food icon
+let FoodIcon = L.icon({
+    iconUrl: foodicon,
+    iconSize: [25,25],
+    iconAnchor: [12.5 ,20],
+    popupAnchor: [0, -20]
+});
+//home icon
+let HomeIcon = L.icon({
+    iconUrl: homeicon,
+    iconSize: [25,25],
+    iconAnchor: [12.5 ,20],
+    popupAnchor: [0, -20]
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
@@ -70,7 +87,7 @@ class Map extends React.Component {
         Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
   response => {
     const address = response.results[0].formatted_address;
-    L.marker([position.coords.latitude, position.coords.longitude]).addTo(Window.map).bindPopup(address);
+    L.marker([position.coords.latitude, position.coords.longitude],{icon: HomeIcon}).addTo(Window.map).bindPopup(address);
 
   },
   error => {
@@ -80,13 +97,6 @@ class Map extends React.Component {
     });
 }).addTo(Window.map);
 
-//geojson data import via leaflet-ajax lib
-//var e3Layer = new L.GeoJSON.AJAX(e3, {
-//
-//	}).addTo(Window.map);
-//var gsnLayer = new L.GeoJSON.AJAX(gsn, {
-//		pointToLayer: pointToLayer
-//	}).addTo(Window.map);
 
  function pointToLayer(feature, latlng) {
 		var geojsonMarkerOptions = {
@@ -109,14 +119,51 @@ componentDidUpdate() {
       response => {
       const { lat, lng } = response.results[0].geometry.location;
       if(this.props.markerPosition != "places here"){
-          L.marker([lat, lng]).addTo(Window.map).bindPopup("Item ID: "+JSON.stringify(this.props.test[0]._id)+"<br>"+"Proudct Name:  "+JSON.stringify(this.props.test[0].product_name)+"<br>"+"Brands: "+JSON.stringify(this.props.test[0].brands)+"<br>"+"Purchase Places: "+JSON.stringify(this.props.test[0].purchase_places));
+          L.marker([lat, lng], {icon: FoodIcon}).addTo(Window.map).bindPopup("Item ID: "+JSON.stringify(this.props.test[0]._id)+"<br>"+"Proudct Name:  "+JSON.stringify(this.props.test[0].product_name)+"<br>"+"Brands: "+JSON.stringify(this.props.test[0].brands)+"<br>"+"Purchase Places: "+JSON.stringify(this.props.test[0].purchase_places));
           navigator.geolocation.getCurrentPosition((position)=>{
             Geocode.fromLatLng(position.coords.latitude, position.coords.longitude).then(
               response => {
+                     if (typeof (Number.prototype.toRad) === "undefined") {
+    Number.prototype.toRad = function () {
+        return this * Math.PI / 180;
+    }
+}
+//-- Define radius function
+if (typeof (Number.prototype.toRad) === "undefined") {
+    Number.prototype.toRad = function () {
+        return this * Math.PI / 180;
+    }
+}
+//-- Define degrees function
+if (typeof (Number.prototype.toDeg) === "undefined") {
+    Number.prototype.toDeg = function () {
+        return this * (180 / Math.PI);
+    }
+}
+
+//-- Define middle point function
+function middlePoint(lat1, lng1, lat2, lng2) {
+	
+    //-- Longitude difference
+    var dLng = (lng2 - lng1).toRad();
+
+    //-- Convert to radians
+    lat1 = lat1.toRad();
+    lat2 = lat2.toRad();
+    lng1 = lng1.toRad();
+
+    var bX = Math.cos(lat2) * Math.cos(dLng);
+    var bY = Math.cos(lat2) * Math.sin(dLng);
+    var lat3 = Math.atan2(Math.sin(lat1) + Math.sin(lat2), Math.sqrt((Math.cos(lat1) + bX) * (Math.cos(lat1) + bX) + bY * bY));
+    var lng3 = lng1 + Math.atan2(bY, Math.cos(lat1) + bX);
+
+    //-- Return result
+    return [lat3.toDeg(), lng3.toDeg()];
+} 
                 //var distanceLine = new L.Polyline.AntPath([[lat, lng],[position.coords.latitude, position.coords.longitude]]).addTo(Window.map);
-                var antCurve = antPath(['M',[lat, lng],
-            					   'Q',[53.41771713379898,-113.55468750000001],
-            						   [39.75154536393759,-89.56054687500001],
+                var distanceCurve = antPath(['M',[lat, lng],
+            					   'Q',middlePoint(lat, lng, position.coords.latitude, position.coords.longitude),
+            						   [L.latLng(Window.map.getCenter()).lat,L.latLng(Window.map.getCenter()).lng],
             					   'T',[position.coords.latitude, position.coords.longitude]], {use: L.curve, color: "blue", animate: 3000}).addTo(Window.map);
               },
               error => {

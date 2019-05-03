@@ -13,7 +13,7 @@ const router = express.Router();
 
 // this is our MongoDB database
 // this could also connect to a hosted mongo DB like //const dbRoute = "mongodb+srv://clustertest-xymjq.mongodb.net/test"
-const dbRoute = "mongodb://127.0.0.1:27017/food"; //noshdb
+const dbRoute = "mongodb://127.0.0.1:27017/noshdb"; //noshdb
 // connects our back end code with the database
 
 mongoose.connect(
@@ -35,7 +35,7 @@ app.use(logger("dev"));
 //getData/query?id=0000000035590&brands=Taste%20Adventure
 router.get("/getData", (req, res) => {
   var id = req.query.id;
-  db.db.collection('USonly',function(err, data){
+  db.db.collection('USFoodOnly',function(err, data){
     if(err){throw err;}
     else {
       data.find({"_id": id}).toArray(function(error, documents) {
@@ -59,7 +59,7 @@ router.post("/putData", (req, res) => {
   const manu = req.body.manufacturing_places;
   const prodName  = req.body.product_name;
   const editor = req.body.last_editor;
-  db.db.collection('USonly',function(err, data){
+  db.db.collection('USFoodOnly',function(err, data){
     if(err){console.log("Error posting,")}
     else {
       data.insertOne({
@@ -84,7 +84,7 @@ router.post("/updateData", (req, res) => {
   const manu = req.body.manufacturing_places;
   const prodName  = req.body.product_name;
   const editor = req.body.last_editor;
-  db.db.collection('USonly',function(err, data){
+  db.db.collection('USFoodOnly',function(err, data){
     if(err){console.log("Error posting", err)}
     else {
       data.findOneAndUpdate({
@@ -110,7 +110,7 @@ router.post("/updateData", (req, res) => {
 router.delete("/deleteData", (req, res) => {
   const id = req.body.id;
   console.log(id)
-  db.db.collection('USonly',function(err, data){
+  db.db.collection('USFoodOnly',function(err, data){
     if(err){console.log("Error posting", err)}
     else {
       data.findOneAndDelete({
