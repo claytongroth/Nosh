@@ -1,5 +1,6 @@
 // /client/App.js
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Tabs from 'react-bootstrap/Tabs'
@@ -28,6 +29,21 @@ class MainApp extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.DeleteComponent = () => {
+      return (
+        <Delete parentChange={(e)=>this.handleChange(e)} parentClick={(e)=>this.deleteFromDB(e)} />
+      );
+    };
+    this.AddUpdateComponent = () => {
+      return (
+        <AddUpdate parentChange={(e)=>this.handleChange(e)} parentClickAdd={(e)=>this.putDataToDB(e)} parentClickUpdate={(e)=>this.updateDB(e)} />
+      );
+    };
+    this.QueryComponent = () => {
+      return (
+        <Query parentChange={(e)=>this.handleChange(e)} parentClick={(e)=>this.handleSubmit(e)} />
+      );
+    };
   }
   handleSubmit(e){
     e.preventDefault();
@@ -47,7 +63,6 @@ class MainApp extends React.Component {
   }
 
   componentDidMount() {
-    //get users location here
   }
   // never let a process live forever
   // always kill a process everytime we are done using it
@@ -63,10 +78,7 @@ class MainApp extends React.Component {
     //.then(data => data.text()).then(data => console.log(data))
     .then(data => data.json())
     .then(answer => this.setState({ data: answer },
-      //console.log(answer)
-      //[""0""].product_name
-      // catching this error is on hold because of an issue where the first submit click does not store data in state.
-      answer.length == 0 ? this.showModal("query", null, "There is no record matching the ID you entered.") : console.log("Queried record: ", answer)
+      this.state.data.length == 0 ? this.showModal("query", null, "There is no record matching the ID you entered.") : console.log("Queried record: ", this.state.data[0])
     ));
   };
 
@@ -178,29 +190,27 @@ class MainApp extends React.Component {
           <button className="btn btn-primary" id="ok" name="ok" onClick={this.hideModal}>Ok</button>
         </Modal.Footer>
       </Modal>
+      <Router>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <div className="container-fluid">
+        <Link to={'/'}>Query Existing</Link>
+        <Link to={'/addUpdate'}>Add/Update Data</Link>
+        <Link to={'/delete'}>Delete Data</Link>
           <div className="row">
-          <div className="col-md-4">
-          <Tabs defaultActiveKey="query" id="uncontrolled-tab-example">
-            <Tab eventKey="addUpdate" title="Add/Udpate Data">
-              <AddUpdate parentChange={(e)=>this.handleChange(e)} parentClickAdd={(e)=>this.putDataToDB(e)} parentClickUpdate={(e)=>this.updateDB(e)} />
-            </Tab>
-            <Tab eventKey="query" title="Query Data">
-              <Query parentChange={(e)=>this.handleChange(e)} parentClick={(e)=>this.handleSubmit(e)} />
-            </Tab>
-            <Tab eventKey="delete" title="Delete Data">
-              <Delete parentChange={(e)=>this.handleChange(e)} parentClick={(e)=>this.deleteFromDB(e)} />
-            </Tab>
-          </Tabs>
-          </div>
+              <Switch>
+                  <Route exact path='/' component={this.QueryComponent} />
+                  <Route exact path='/addUpdate' component={this.AddUpdateComponent} />
+                  <Route exact path='/delete' component={this.DeleteComponent} />
+              </Switch>
             <div className="col-md-8">
                 <Map markerPosition={this.state.data[0] ? this.state.data[0].manufacturing_places: "places here"} test ={this.state.data} />
             </div>
           </div>
         </div>
+
+      </Router>
       </div>
     );
   }

@@ -5,9 +5,6 @@ import React from "react";
 
 //intergrate the functionality of the Delete Data button with the handleSubmit
 class Delete extends React.Component {
-  constructor(props) {
-    super(props);
-    };
   click = (e) => {
     e.preventDefault();
     this.props.parentClick(e);
@@ -20,7 +17,7 @@ class Delete extends React.Component {
   }
   render(){
   return (
-    <div className="col-md-4">
+    <div className="col-md-12">
       <h3 className="text-center">
         Delete a Product
       </h3>

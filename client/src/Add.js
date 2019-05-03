@@ -1,9 +1,6 @@
 import React from "react";
 
 class AddUpdate extends React.Component {
-  constructor(props) {
-    super(props);
-    };
   clickAdd = (e) => {
     e.preventDefault();
     this.props.parentClickAdd(e);
@@ -20,7 +17,7 @@ class AddUpdate extends React.Component {
   }
   render(){
     return (
-    <div className="col-md-4">
+    <div className="col-md-12">
       <h3 className="text-center">
         Add or Update a Product
       </h3>

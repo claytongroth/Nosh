@@ -1,9 +1,6 @@
 import React from "react";
 
 class Query extends React.Component {
-  constructor(props) {
-    super(props);
-    };
   click = (e) => {
     e.preventDefault();
     this.props.parentClick(e);
@@ -16,7 +13,7 @@ class Query extends React.Component {
   }
   render(){
     return (
-    <div className="col-md-4">
+    <div className="col-md-12">
       <h3 className="text-center">
         View a Product
       </h3>
